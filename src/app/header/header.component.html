@@ -1,0 +1,64 @@
+<nav class="navbar navbar-default navbar-expand-lg nav-color"  *ngIf="isAuthenticated">
+  <a
+    class="navbar-brand"
+    *ngIf="isAuthenticated"
+    routerLinkActive="active"
+    routerLink="/myTodos"
+    >All Tasks</a
+  >
+  <button
+  class="navbar-toggler "
+  type="button"
+  data-toggle="collapse"
+  data-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+>
+  <span class="navbar-toggler-icon text-dark"></span>
+</button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     
+    <ul class="navbar-nav ml-auto">
+        <li>
+            <a *ngIf="isAuthenticated"
+        mat-icon-button
+        [matTooltip]= "fullName"
+        color="primary"
+        class="float-right" 
+        ><mat-icon>
+          accessibility_new
+        </mat-icon></a>
+          </li>
+      <li *ngIf="!isAuthenticated" class="nav-item active">
+        <a class="nav-link" routerLinkActive="active" routerLink="/signin"
+          >Login</a
+        >
+      </li>
+      <li *ngIf="!isAuthenticated" class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/signup"
+          >Sign Up</a
+        >
+      </li>
+      <li *ngIf="isAuthenticated" class="nav-item">
+        <a class="nav-link" routerLinkActive="active" routerLink="/friends"
+          >Friends</a
+        >
+      </li>
+      <li *ngIf="isAuthenticated" class="nav-item">
+        <a *ngIf="isAuthenticated"
+        mat-icon-button
+        matTooltip = "Logout"
+        color="primary"
+        class="float-right" 
+        (click)="onLogout()"
+        ><mat-icon>
+          power_settings_new
+        </mat-icon></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+

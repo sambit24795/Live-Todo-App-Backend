@@ -1,0 +1,14 @@
+:host{
+    display: block;
+    font-family: 'Fredoka One', cursive;
+}
+
+.nav-color {
+    background-color: whitesmoke;
+    border-top: 5px #55D1F7 solid;
+}
+
+::ng-deep .mat-tooltip {
+    background:red;
+}
+

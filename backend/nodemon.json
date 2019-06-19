@@ -1,0 +1,6 @@
+{
+    "env": {
+        "MOPNGO_ATLAS_PW" : "QNQZtJOwjrq7jv1x",
+        "JWT_KEY" : "This_is_batman_secrete_key_and_this_should_be_a_bit_longer"
+    }
+}
